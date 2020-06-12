@@ -32,6 +32,7 @@ export const DisplayFlex = ({
                     justifyContent: justifyContent || 'normal',
                     alignItems: alignItems || 'stretch',
                     flexWrap: flexWrap || 'nowrap',
+                    flex: 1,
                 }}
             >
                 {Array(boxes || 8)
