@@ -63,14 +63,15 @@ body {
 }
 
 .flex-boxes-container {
-    display: block;
+    display: flex;
     max-width: 100vw;
     max-height: 360px;
     width: 480px;
     height: 360px;
-    overflow-x: auto;
-    overflow-y: auto;
     border: 3px dashed #3f3f3f;
+    flex: 1;
+    flex-wrap: wrap;
+    overflow: auto;
 }
 
 ul.no-list-style {
