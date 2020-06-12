@@ -16,8 +16,6 @@ export const App = () => {
     });
 
     const handleChangeFlexProperty = (state: FlexPropertyFormState) => {
-        console.info(state);
-
         setFlexProperty((prevState) => ({
             ...prevState,
             ...state,
@@ -30,22 +28,26 @@ export const App = () => {
 
     return (
         <MainLayout>
-            <DisplayFlex {...flexProperty.values} />
-            <div className="form-container">
-                <FlexProperty onChange={handleChangeFlexProperty} />
+            <div className="top-conatainer">
+                <DisplayFlex {...flexProperty.values} />
                 <div className="code-container">
                     <h2>CSS</h2>
                     <pre>{`.container {
     display: flex;
+    flex-direction: ${flexProperty.values.flexDirection};
     justify-content: ${flexProperty.values.justifyContent};
     align-items: ${flexProperty.values.alignItems};
     flex-wrap: ${flexProperty.values.flexWrap};
 }`}</pre>
                 </div>
+            </div>
+
+            <div className="form-container">
+                <FlexProperty onChange={handleChangeFlexProperty} />
 
                 <div>
+                    <h2>References</h2>
                     <aside>
-                        <h2>References</h2>
                         <p>
                             <a
                                 href="https://developer.mozilla.org/en-US/docs/Glossary/Flexbox"

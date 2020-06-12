@@ -45,7 +45,7 @@ export const FlexProperty = ({ onChange }: FlexPropertyProps) => {
 
     return (
         <React.Fragment>
-            <h2>Flexbox properties</h2>
+            <h2>Try it yourself!</h2>
 
             <form role="form">
                 <legend title="box count">
@@ -67,39 +67,6 @@ export const FlexProperty = ({ onChange }: FlexPropertyProps) => {
                 <legend title="flex-direction">
                     <h3>flex-direction</h3>
                     <ul className="no-list-style">
-                        <li>
-                            <input
-                                type="radio"
-                                value="initial"
-                                checked={formState.values.flexDirection === 'initial'}
-                                name="flexDirection"
-                                id="flex-direction-initial"
-                                onChange={handleChangeInput}
-                            />
-                            <label htmlFor="flex-direction-initial">initial</label>
-                        </li>
-                        <li>
-                            <input
-                                type="radio"
-                                value="revert"
-                                checked={formState.values.flexDirection === 'revert'}
-                                name="flexDirection"
-                                id="flex-direction-revert"
-                                onChange={handleChangeInput}
-                            />
-                            <label htmlFor="flex-direction-revert">revert</label>
-                        </li>
-                        <li>
-                            <input
-                                type="radio"
-                                value="unset"
-                                checked={formState.values.flexDirection === 'unset'}
-                                name="flexDirection"
-                                id="flex-direction-unset"
-                                onChange={handleChangeInput}
-                            />
-                            <label htmlFor="flex-direction-unset">unset</label>
-                        </li>
                         <li>
                             <input
                                 type="radio"
@@ -144,6 +111,43 @@ export const FlexProperty = ({ onChange }: FlexPropertyProps) => {
                             />
                             <label htmlFor="flex-direction-column-reverse">column-reverse</label>
                         </li>
+                        <li>
+                            <span>Global values</span>
+                        </li>
+                        <li>
+                            <input
+                                type="radio"
+                                value="initial"
+                                checked={formState.values.flexDirection === 'initial'}
+                                name="flexDirection"
+                                id="flex-direction-initial"
+                                onChange={handleChangeInput}
+                            />
+                            <label htmlFor="flex-direction-initial">initial</label>
+                        </li>
+                        <li>
+                            <input
+                                type="radio"
+                                value="revert"
+                                checked={formState.values.flexDirection === 'revert'}
+                                name="flexDirection"
+                                id="flex-direction-revert"
+                                onChange={handleChangeInput}
+                            />
+                            <label htmlFor="flex-direction-revert">revert</label>
+                        </li>
+                        <li>
+                            <input
+                                type="radio"
+                                value="unset"
+                                checked={formState.values.flexDirection === 'unset'}
+                                name="flexDirection"
+                                id="flex-direction-unset"
+                                onChange={handleChangeInput}
+                            />
+                            <label htmlFor="flex-direction-unset">unset</label>
+                        </li>
+
                         <li>
                             <input
                                 type="radio"
