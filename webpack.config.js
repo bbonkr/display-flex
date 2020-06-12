@@ -40,7 +40,10 @@ module.exports = {
     plugins: [
         new webpack.LoaderOptionsPlugin({ debug: !isProduction }),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: './src/index.ejs',
+            templateParameters: {
+                gaId: process.env.GA_ID || '',
+            },
         }),
         new CopyPlugin({
             patterns: [
