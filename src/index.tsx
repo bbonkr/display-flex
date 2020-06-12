@@ -1,9 +1,9 @@
 import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { MainLayout } from './components/MainLayout';
+import { App } from './components/App';
 
-const Hot = hot(MainLayout);
+const Hot = hot(App);
 
 ReactDOM.render(<Hot />, document.querySelector('#app'));
 
