@@ -507,7 +507,7 @@ export const FlexProperty = ({ onChange }: FlexPropertyProps) => {
                                 id="align-items-flex-end"
                                 onChange={handleChangeInput}
                             />
-                            <label htmlFor="align-items-flex-start">flex-end</label>
+                            <label htmlFor="align-items-flex-end">flex-end</label>
                         </li>
                         <li>Baseline alignment</li>
                         <li>
