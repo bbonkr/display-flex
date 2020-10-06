@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const workboxPlugin = require('workbox-webpack-plugin');
 const path = require('path');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -44,6 +47,13 @@ module.exports = {
             templateParameters: {
                 gaId: process.env.GA_ID || '',
             },
+        }),
+        new webpack.DefinePlugin({
+            process: {
+                env: {
+                    GA_ID: JSON.stringify(process.env.GA_ID),
+                }
+            }
         }),
         new CopyPlugin({
             patterns: [

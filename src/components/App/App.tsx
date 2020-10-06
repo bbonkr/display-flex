@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import { MainLayout } from '../MainLayout';
 import { DisplayFlex } from '../DisplayFlex';
 import { FlexProperty } from '../FlexProperty';
@@ -25,6 +26,17 @@ export const App = () => {
             },
         }));
     };
+
+    useEffect(() => {
+        console.info('GA_ID', process.env.GA_ID);
+        if (process.env.GA_ID) {
+            ReactGA.initialize(process.env.GA_ID);
+
+            if (window) {
+                ReactGA.pageview(window.location.pathname);
+            }
+        }
+    },[])
 
     return (
         <MainLayout>
