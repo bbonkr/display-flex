@@ -351,3 +351,5 @@ MigrationBackup/
 
 # build output
 output/
+
+.env
