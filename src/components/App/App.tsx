@@ -4,6 +4,7 @@ import { MainLayout } from '../MainLayout';
 import { DisplayFlex } from '../DisplayFlex';
 import { FlexProperty } from '../FlexProperty';
 import { FlexPropertyFormState } from '../../lib/FlexPropertyFormState';
+import { loadTheme } from '@fluentui/react';
 
 export const App = () => {
     const [flexProperty, setFlexProperty] = useState<FlexPropertyFormState>({
@@ -28,7 +29,26 @@ export const App = () => {
     };
 
     useEffect(() => {
-        console.info('GA_ID', process.env.GA_ID);
+        loadTheme({
+            defaultFontStyle: { fontFamily: 'Monaco, Menlo, Consolas', fontWeight: 'regular' },
+            fonts: {
+                small: {
+                    fontSize: '11px',
+                },
+                medium: {
+                    fontSize: '13px',
+                },
+                large: {
+                    fontSize: '20px',
+                    fontWeight: 'semibold',
+                },
+                xLarge: {
+                    fontSize: '22px',
+                    fontWeight: 'semibold',
+                },
+            },
+        });
+
         if (process.env.GA_ID) {
             ReactGA.initialize(process.env.GA_ID);
 
@@ -36,7 +56,7 @@ export const App = () => {
                 ReactGA.pageview(window.location.pathname);
             }
         }
-    },[])
+    }, []);
 
     return (
         <MainLayout>
@@ -66,6 +86,11 @@ export const App = () => {
                                 target="_blank"
                             >
                                 MDN: Flexbox
+                            </a>
+                        </p>
+                        <p>
+                            <a href="https://github.com/bbonkr/display-flex" target="_blank">
+                                GitHub: bbonkr/display-flex
                             </a>
                         </p>
                     </aside>

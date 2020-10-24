@@ -1,12 +1,9 @@
-import { FlexDirection } from './FlexDirection';
-import { FlexWrap } from './FlexWrap';
-
 export interface FormValues {
     boxes: number;
-    flexDirection?: FlexDirection;
+    flexDirection?: string;
     justifyContent?: string;
     alignItems?: string;
-    flexWrap?: FlexWrap;
+    flexWrap?: string;
 }
 
 export interface FlexPropertyFormState {

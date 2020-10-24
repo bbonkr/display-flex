@@ -2,8 +2,10 @@ import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { App } from './components/App';
-
+import { initializeIcons } from '@uifabric/icons';
 const Hot = hot(App);
+
+initializeIcons();
 
 ReactDOM.render(<Hot />, document.querySelector('#app'));
 
