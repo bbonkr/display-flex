@@ -1,7 +1,7 @@
 import React from 'react';
-import { Box } from './Box';
 import { FlexDirection } from '../../lib/FlexDirection';
 import { FlexWrap } from '../../lib/FlexWrap';
+import { Box } from './Box';
 
 interface DisplayFlexProps {
     /**
@@ -10,10 +10,10 @@ interface DisplayFlexProps {
      * 기본: 8
      */
     boxes?: number;
-    flexDirection?: FlexDirection;
+    flexDirection?: string;
     justifyContent?: string;
     alignItems?: string;
-    flexWrap?: FlexWrap;
+    flexWrap?: string;
 }
 
 export const DisplayFlex = ({
@@ -28,10 +28,10 @@ export const DisplayFlex = ({
             <div
                 style={{
                     display: 'flex',
-                    flexDirection: flexDirection || 'row',
-                    justifyContent: justifyContent || 'normal',
-                    alignItems: alignItems || 'stretch',
-                    flexWrap: flexWrap || 'nowrap',
+                    flexDirection: (flexDirection ?? 'row') as FlexDirection,
+                    justifyContent: justifyContent ?? 'normal',
+                    alignItems: alignItems ?? 'stretch',
+                    flexWrap: (flexWrap ?? 'nowrap') as FlexWrap,
                     flex: 1,
                 }}
             >
