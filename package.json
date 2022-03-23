@@ -46,7 +46,7 @@
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.0",
         "workbox-webpack-plugin": "^5.1.4",
-        "node-forge": ">=0.10.0"
+        "node-forge": ">=1.3.0"
     },
     "dependencies": {
         "@fluentui/react": "^7.147.1",
